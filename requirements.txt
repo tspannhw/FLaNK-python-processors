@@ -42,3 +42,10 @@ transformers[torch]
 
 #PSUTIL
 psutil
+
+
+#GetFakeRecord
+faker
+
+# Wiki
+wikipedia-api
