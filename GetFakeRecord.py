@@ -323,13 +323,13 @@ class GetFakeRecord(FlowFileTransform):
             attributes["uuidkey"] = uuid_key
 
         if ( context.getProperty(self.CREATED_DT).asBoolean() ): 
-            attributes["createddt"] = fake.date() 
+            attributes["createddt"] = str(fake.date() )
 
         if ( context.getProperty(self.EMAIL).asBoolean() ): 
             attributes["email"] = fake.ascii_email() 
 
         if ( context.getProperty(self.IP).asBoolean() ): 
-            attributes["ipv4public"] = fake.ipv4_public() 
+            attributes["ipv4public"] = str(fake.ipv4_public() )
 
         if ( context.getProperty(self.USER_NAME).asBoolean() ): 
             attributes["username"] = fake.user_name() 
@@ -344,16 +344,16 @@ class GetFakeRecord(FlowFileTransform):
             attributes["country"] = fake.country() 
 
         if ( context.getProperty(self.POSTCODE).asBoolean() ): 
-            attributes["postcode"] = fake.postcode() 
+            attributes["postcode"] = str(fake.postcode())
 
         if ( context.getProperty(self.STREET_ADDRESS).asBoolean() ): 
             attributes["streetaddress"] = fake.street_address() 
 
         if ( context.getProperty(self.LICENSE_PLATE).asBoolean() ): 
-            attributes["licenseplate"] = fake.license_plate() 
+            attributes["licenseplate"] = str(fake.license_plate())
 
         if ( context.getProperty(self.EAN13).asBoolean() ): 
-            attributes["ean13"] = fake.ean13() 
+            attributes["ean13"] = str(fake.ean13() )
 
         if ( context.getProperty(self.CATCH_PHRASE).asBoolean() ): 
             attributes["catchphrase"] = fake.catch_phrase() 
@@ -365,16 +365,16 @@ class GetFakeRecord(FlowFileTransform):
             attributes["company"] = fake.company() 
 
         if ( context.getProperty(self.LATITUDE).asBoolean() ): 
-            attributes["latitude"] = fake.latitude() 
+            attributes["latitude"] = str(fake.latitude() )
 
         if ( context.getProperty(self.LONGITUDE).asBoolean() ): 
-            attributes["longitude"] = fake.longitude() 
+            attributes["longitude"] = str(fake.longitude() )
 
         if ( context.getProperty(self.JOB).asBoolean() ): 
             attributes["job"] = fake.job() 
 
         if ( context.getProperty(self.MD5).asBoolean() ): 
-            attributes["md5"] = fake.md5() 
+            attributes["md5"] = str(fake.md5() )
 
         if ( context.getProperty(self.PASSWORD).asBoolean() ): 
             attributes["password"] = fake.password() 
@@ -386,7 +386,7 @@ class GetFakeRecord(FlowFileTransform):
             attributes["lastname"] = fake.last_name() 
 
         if ( context.getProperty(self.PHONE_NUMBER).asBoolean() ): 
-            attributes["phonenumber"] = fake.phone_number()  
+            attributes["phonenumber"] = str(fake.phone_number() )
   
         if ( context.getProperty(self.USER_AGENT).asBoolean() ): 
             attributes["useragent"] = fake.user_agent()  
