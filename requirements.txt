@@ -49,3 +49,8 @@ faker
 
 # Wiki
 wikipedia-api
+
+
+# GTFS Transit ProtoBuf
+gtfs-realtime-bindings
+
