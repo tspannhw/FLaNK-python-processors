@@ -16,6 +16,16 @@
 # Shared requirements
 openai==0.28.1
 
+# Image
+# opencv-python
+# numpy
+datasets
+
+# Milvus requirements
+sentence-transformers
+pymilvus
+numpy
+
 # Chroma requirements
 chromadb==0.4.14
 onnxruntime
@@ -24,9 +34,13 @@ tqdm
 requests
 
 # Pinecone requirements
+#pinecone-client
+#tiktoken
+#langchain==0.0.331
+
+# Pinecone requirements
 pinecone-client==3.0.0
 tiktoken
-#langchain==0.0.331
 langchain==0.1.1
 
 # IBM WatsonX AI requirements
@@ -40,9 +54,11 @@ torchvision
 torchaudio
 transformers[torch]
 
+# Extract Entities
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+
 #PSUTIL
 psutil
-
 
 #GetFakeRecord
 faker
@@ -50,7 +66,9 @@ faker
 # Wiki
 wikipedia-api
 
-
 # GTFS Transit ProtoBuf
 gtfs-realtime-bindings
 
+# Yahoo Finance
+yahoo-fin
+yahoo_fin
