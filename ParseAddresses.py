@@ -55,8 +55,8 @@ class ParseAddresses(FlowFileTransform):
 
         addresses = pyap.parse(parse_text, country='US')
 
-        primaryaddress = parse_text
-        json_string = parse_text
+        primaryaddress = ""
+        json_string = ""
         
         try:
             for address in addresses:
