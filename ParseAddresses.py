@@ -55,13 +55,13 @@ class ParseAddresses(FlowFileTransform):
 
         addresses = pyap.parse(parse_text, country='US')
 
-        primaryaddress = ""
-        json_string = ""
+        primaryaddress = parse_text
+        json_string = parse_text
         
         try:
             for address in addresses:
                 # shows found address
-                if ( str(address) != "" )
+                if str(address) != "" :
                         primaryaddress = str(address)
                         json_string = json.dumps(address.as_dict())
         except Exception as ex:
